@@ -9,6 +9,9 @@ Product Website : https://instikit.com
 Demo            : https://in.instikit.com
 --------------------------------------------
 
+Restore Database:-
+php artisan migrate:fresh --seed
+
 To read installation guidelines, please visit http://support.scriptmint.com/support/solutions/folders/42000099005
 
 Version 2.9.0 Released on 29 May 2020
