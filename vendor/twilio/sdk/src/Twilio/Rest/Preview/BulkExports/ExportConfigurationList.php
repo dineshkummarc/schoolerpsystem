@@ -32,7 +32,7 @@ class ExportConfigurationList extends ListResource {
     /**
      * Constructs a ExportConfigurationContext
      *
-     * @param string $resourceType The type of communication – Messages, Calls
+     * @param string $resourceType The resource_type
      * @return \Twilio\Rest\Preview\BulkExports\ExportConfigurationContext
      */
     public function getContext($resourceType) {

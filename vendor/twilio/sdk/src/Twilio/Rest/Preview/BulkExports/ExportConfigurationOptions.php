@@ -17,9 +17,9 @@ use Twilio\Values;
  */
 abstract class ExportConfigurationOptions {
     /**
-     * @param bool $enabled Whether files are automatically generated
-     * @param string $webhookUrl URL targeted at export
-     * @param string $webhookMethod Whether to GET or POST to the webhook url
+     * @param bool $enabled The enabled
+     * @param string $webhookUrl The webhook_url
+     * @param string $webhookMethod The webhook_method
      * @return UpdateExportConfigurationOptions Options builder
      */
     public static function update($enabled = Values::NONE, $webhookUrl = Values::NONE, $webhookMethod = Values::NONE) {
@@ -29,9 +29,9 @@ abstract class ExportConfigurationOptions {
 
 class UpdateExportConfigurationOptions extends Options {
     /**
-     * @param bool $enabled Whether files are automatically generated
-     * @param string $webhookUrl URL targeted at export
-     * @param string $webhookMethod Whether to GET or POST to the webhook url
+     * @param bool $enabled The enabled
+     * @param string $webhookUrl The webhook_url
+     * @param string $webhookMethod The webhook_method
      */
     public function __construct($enabled = Values::NONE, $webhookUrl = Values::NONE, $webhookMethod = Values::NONE) {
         $this->options['enabled'] = $enabled;
@@ -40,9 +40,9 @@ class UpdateExportConfigurationOptions extends Options {
     }
 
     /**
-     * If true, Twilio will automatically generate every day's file when the day is over.
+     * The enabled
      *
-     * @param bool $enabled Whether files are automatically generated
+     * @param bool $enabled The enabled
      * @return $this Fluent Builder
      */
     public function setEnabled($enabled) {
@@ -51,9 +51,9 @@ class UpdateExportConfigurationOptions extends Options {
     }
 
     /**
-     * Stores the URL destination for the method specified in webhook_method.
+     * The webhook_url
      *
-     * @param string $webhookUrl URL targeted at export
+     * @param string $webhookUrl The webhook_url
      * @return $this Fluent Builder
      */
     public function setWebhookUrl($webhookUrl) {
@@ -62,9 +62,9 @@ class UpdateExportConfigurationOptions extends Options {
     }
 
     /**
-     * Sets whether Twilio should call a webhook URL when the automatic generation is complete, using GET or POST. The actual destination is set in the webhook_url
+     * The webhook_method
      *
-     * @param string $webhookMethod Whether to GET or POST to the webhook url
+     * @param string $webhookMethod The webhook_method
      * @return $this Fluent Builder
      */
     public function setWebhookMethod($webhookMethod) {

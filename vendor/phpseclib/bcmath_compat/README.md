@@ -1,15 +1,15 @@
 # bcmath_compat
 
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
+[![CI Status](https://github.com/phpseclib/bcmath_compat/actions/workflows/ci.yml/badge.svg?branch=2.0&event=push "CI Status")](https://github.com/phpseclib/bcmath_compat/actions/workflows/ci.yml?query=branch%3A2.0)
 
-PHP 5.x/7.x polyfill for bcmath extension
+PHP 5.x-8.x polyfill for bcmath extension
 
 ## Installation
 
 With [Composer](https://getcomposer.org/):
 
-``` bash
+```bash
 $ composer require phpseclib/bcmath_compat
 ```
 

@@ -50,7 +50,7 @@ class ExportList extends ListResource {
     /**
      * Constructs a ExportContext
      *
-     * @param string $resourceType The type of communication – Messages, Calls
+     * @param string $resourceType The resource_type
      * @return \Twilio\Rest\Preview\BulkExports\ExportContext
      */
     public function getContext($resourceType) {

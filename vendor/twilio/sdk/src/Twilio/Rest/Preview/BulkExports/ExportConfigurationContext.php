@@ -24,7 +24,7 @@ class ExportConfigurationContext extends InstanceContext {
      * Initialize the ExportConfigurationContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $resourceType The type of communication – Messages, Calls
+     * @param string $resourceType The resource_type
      * @return \Twilio\Rest\Preview\BulkExports\ExportConfigurationContext
      */
     public function __construct(Version $version, $resourceType) {

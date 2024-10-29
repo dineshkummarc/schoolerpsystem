@@ -12,18 +12,14 @@ namespace Twilio\Rest;
 use Twilio\Domain;
 use Twilio\Exceptions\TwilioException;
 use Twilio\Rest\Studio\V1;
-use Twilio\Rest\Studio\V2;
 
 /**
  * @property \Twilio\Rest\Studio\V1 $v1
- * @property \Twilio\Rest\Studio\V2 $v2
- * @property \Twilio\Rest\Studio\V2\FlowList $flows
- * @property \Twilio\Rest\Studio\V2\FlowValidateList $flowValid
- * @method \Twilio\Rest\Studio\V2\FlowContext flows(string $sid)
+ * @property \Twilio\Rest\Studio\V1\FlowList $flows
+ * @method \Twilio\Rest\Studio\V1\FlowContext flows(string $sid)
  */
 class Studio extends Domain {
     protected $_v1 = null;
-    protected $_v2 = null;
 
     /**
      * Construct the Studio Domain
@@ -46,16 +42,6 @@ class Studio extends Domain {
             $this->_v1 = new V1($this);
         }
         return $this->_v1;
-    }
-
-    /**
-     * @return \Twilio\Rest\Studio\V2 Version v2 of studio
-     */
-    protected function getV2() {
-        if (!$this->_v2) {
-            $this->_v2 = new V2($this);
-        }
-        return $this->_v2;
     }
 
     /**
@@ -92,25 +78,18 @@ class Studio extends Domain {
     }
 
     /**
-     * @return \Twilio\Rest\Studio\V2\FlowList
+     * @return \Twilio\Rest\Studio\V1\FlowList
      */
     protected function getFlows() {
-        return $this->v2->flows;
+        return $this->v1->flows;
     }
 
     /**
      * @param string $sid The SID that identifies the resource to fetch
-     * @return \Twilio\Rest\Studio\V2\FlowContext
+     * @return \Twilio\Rest\Studio\V1\FlowContext
      */
     protected function contextFlows($sid) {
-        return $this->v2->flows($sid);
-    }
-
-    /**
-     * @return \Twilio\Rest\Studio\V2\FlowValidateList
-     */
-    protected function getFlowValid() {
-        return $this->v2->flowValid;
+        return $this->v1->flows($sid);
     }
 
     /**

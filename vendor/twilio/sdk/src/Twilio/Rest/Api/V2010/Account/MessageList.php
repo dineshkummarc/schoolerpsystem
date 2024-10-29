@@ -56,8 +56,6 @@ class MessageList extends ListResource {
             'ProvideFeedback' => Serialize::booleanToString($options['provideFeedback']),
             'ValidityPeriod' => $options['validityPeriod'],
             'ForceDelivery' => Serialize::booleanToString($options['forceDelivery']),
-            'ContentRetention' => $options['contentRetention'],
-            'AddressRetention' => $options['addressRetention'],
             'SmartEncoded' => Serialize::booleanToString($options['smartEncoded']),
             'PersistentAction' => Serialize::map($options['persistentAction'], function($e) { return $e; }),
         ));

@@ -32,7 +32,6 @@ use Twilio\VersionInfo;
  * @property \Twilio\Rest\Messaging $messaging
  * @property \Twilio\Rest\Monitor $monitor
  * @property \Twilio\Rest\Notify $notify
- * @property \Twilio\Rest\Numbers $numbers
  * @property \Twilio\Rest\Preview $preview
  * @property \Twilio\Rest\Pricing $pricing
  * @property \Twilio\Rest\Proxy $proxy
@@ -113,7 +112,6 @@ class Client {
     protected $_messaging = null;
     protected $_monitor = null;
     protected $_notify = null;
-    protected $_numbers = null;
     protected $_preview = null;
     protected $_pricing = null;
     protected $_proxy = null;
@@ -760,18 +758,6 @@ class Client {
             $this->_notify = new Notify($this);
         }
         return $this->_notify;
-    }
-
-    /**
-     * Access the Numbers Twilio Domain
-     *
-     * @return \Twilio\Rest\Numbers Numbers Twilio Domain
-     */
-    protected function getNumbers() {
-        if (!$this->_numbers) {
-            $this->_numbers = new Numbers($this);
-        }
-        return $this->_numbers;
     }
 
     /**
